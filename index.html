@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <!-- use early version of bootstrap, stored locally -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+  <div class="container">
+  
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+      </div>
+      <div class="col-md-10">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-pills" role="tablist">
+          <li role="presentation" class="active"><a href="#demographic-info" aria-controls="demographic info" role="tab" data-toggle="tab">Demographic Info</a></li>
+          <li role="presentation"><a href="#bar" aria-controls="bar" role="tab" data-toggle="tab">Bar Chart</a></li>
+          <li role="presentation"><a href="#gauge" aria-controls="gauge" role="tab" data-toggle="tab">Gauge Chart</a></li>
+          <li role="presentation"><a href="#bubble" aria-controls="bubble" role="tab" data-toggle="tab">Bubble Chart</a></li>
+        </ul>
+      
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="demographic-info">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Demographic Info</h3>
+              </div>
+              <div id="sample-metadata" class="panel-body"></div>
+            </div>
+          </div><!-- #demographic-info -->
+          <div role="tabpanel" class="tab-pane" id="bar">
+
+          </div>
+          <div role="tabpanel" class="tab-pane" id="gauge">
+
+          </div>
+          <div role="tabpanel" class="tab-pane" id="bubble">
+
+          </div>
+        </div><!-- .tab-content-->
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="static/js/charts.js"></script>
+  <script src="jquery/jquery-3.6.0.min.js"></script>
+  <script src="bootstrap/js/bootstrap.js"></script>
+</body>
+
+</html>
